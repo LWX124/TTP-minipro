@@ -35,9 +35,9 @@
 .top-section {
   position: relative;
   width: 750rpx;
-  padding-bottom: 80rpx;
+  padding-bottom: 40rpx;
   box-sizing: border-box;
-  overflow: hidden;
+  overflow: visible;
   margin-top: calc(-1 * var(--nav-bar-height, 0px));
 }
 
@@ -60,7 +60,7 @@
   flex-direction: column;
   align-items: center;
   gap: 24rpx;
-  padding: 80rpx 40rpx 0;
+  padding: 66rpx 0rpx 0;
 }
 
 /* 头像选择按钮（重置button样式） */
@@ -165,6 +165,8 @@
   padding: 0 32rpx 60rpx;
   box-sizing: border-box;
   background: #eceef2;
+  margin-top: -40rpx;
+  z-index: 2;
 }
 
 /* ---- 奖励统计卡片 ---- */
@@ -172,13 +174,14 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  /* background: #fff; */
+  background: #fff;
   border-radius: 24rpx;
   height: 92rpx;
   width: 100%;
   margin-bottom: 24rpx;
   padding: 0 20rpx;
   box-sizing: border-box;
+  box-shadow: 0rpx 4rpx 16rpx 0rpx rgba(0, 0, 0, 0.08);
 }
 
 .stat-item {
