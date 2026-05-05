@@ -11,9 +11,11 @@
 
 /* ---- 自定义导航栏 ---- */
 .custom-nav {
-  position: relative;
-  z-index: 10;
+  position: fixed;
+  top: 0;
+  left: 0;
   width: 100%;
+  z-index: 100;
 }
 
 .custom-nav-content {
@@ -36,6 +38,7 @@
   padding-bottom: 80rpx;
   box-sizing: border-box;
   overflow: hidden;
+  margin-top: calc(-1 * var(--nav-bar-height, 88px));
 }
 
 /* 背景图 */
