@@ -305,6 +305,14 @@
   border: none;
 }
 
+.share-btn {
+  background: linear-gradient(135deg, #FFFFFF 0%, #FFFBF3 100%);
+}
+
+.welfare-btn {
+  background: linear-gradient(135deg, #FFFFFF 0%, #F1FAFF 100%);
+}
+
 /* 按钮背景图片 */
 .bottom-btn-img {
   position: absolute;
@@ -314,16 +322,24 @@
   height: 100%;
   z-index: 0;
   background: #fff;
+  display: none;
 }
 
 /* text-group_2: font-size 32rpx, color #010005 */
 .bottom-btn-text {
   font-size: 30rpx;
   font-weight: normal;
-  color: #010005;
   position: relative;
   z-index: 1;
   margin-left: 0;
+}
+
+.share-btn .bottom-btn-text {
+  color: #F39B23;
+}
+
+.welfare-btn .bottom-btn-text {
+  color: #4187F0;
 }
 
 /* 退出登录 */
