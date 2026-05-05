@@ -175,15 +175,12 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background: #fff;
-  border-radius: 24rpx;
   height: 140rpx;
   width: 686rpx;
   margin: 0 32rpx;
-  margin-top: 40rpx;
+  margin-top: 24rpx;
   padding: 0 20rpx;
   box-sizing: border-box;
-  box-shadow: 0rpx 4rpx 16rpx 0rpx rgba(0, 0, 0, 0.08);
 }
 
 .stat-item {
@@ -214,7 +211,7 @@
 /* ---- 广告 banner 卡片 ---- */
 .ad-banner-card {
   width: 100%;
-  height: 180rpx;
+  height: 160rpx;
   border-radius: 24rpx;
   margin-bottom: 24rpx;
   overflow: hidden;
@@ -238,7 +235,7 @@
 
 /* image-text_1: width 164rpx, height 140rpx, margin-bottom 40rpx */
 .func-item {
-  width: 33.33%;
+  width: 25%;
   display: flex;
   flex-direction: column;
   align-items: center;
