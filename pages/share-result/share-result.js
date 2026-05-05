@@ -42,5 +42,10 @@ Page({
   // 查看视频 → 上传记录页
   onViewHistory() {
     wx.redirectTo({ url: '/pages/upload-history/upload-history' })
+  },
+
+  // 返回按钮
+  onBack() {
+    wx.navigateBack()
   }
 })

@@ -3,6 +3,9 @@
 
   <!-- 顶部黄色区域（含用户信息） -->
   <view class="top-section">
+    <!-- 背景图 -->
+    <image class="bg-profile" src="/images/mine/bg_profile.png" mode="aspectFill" />
+
     <!-- 游客 -->
     <view wx:if="{{!isLogin}}" class="user-section">
       <view class="avatar avatar-circle avatar-placeholder">
@@ -38,7 +41,7 @@
   <!-- 白色内容卡片 -->
   <view class="content-card">
 
-    <!-- 奖励统计（仅登录后） -->
+    <!-- 奖励统计（仅登录后） - 移到顶部区域外 -->
     <view wx:if="{{isLogin}}" class="stats-row">
       <view class="stat-item">
         <text class="stat-num">{{statistics.totalReward}}</text>
@@ -56,19 +59,10 @@
 
     <!-- 跑车必备神器 Banner -->
     <view class="ad-banner-wrap">
-      <view class="ad-banner-swirl">
-        <image class="ad-banner-swirl-img" src="/images/mine/top_decor.png" mode="widthFix" />
-      </view>
-      <view class="ad-banner-overlay">
-        <text class="ad-banner-title">跑车必备神器</text>
-        <view class="ad-banner-tag">
-          <text class="ad-banner-tag-text">拍照5元—200元</text>
-        </view>
-        <image class="ad-banner-girl" src="/images/mine/camera_girl.png" mode="aspectFit" />
-      </view>
+      <image class="ad-banner-img" src="/images/mine/banner_ad.png" mode="aspectFill" />
     </view>
 
-    <!-- 功能网格 -->
+    <!-- 功能网格 - 改为白色卡片样式 -->
     <view class="func-grid">
       <view class="func-item" bindtap="goUploadHistory">
         <image class="func-icon-img" src="/images/mine/icon_upload_record.png" mode="aspectFit" />
