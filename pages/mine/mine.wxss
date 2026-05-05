@@ -38,7 +38,7 @@
   padding-bottom: 80rpx;
   box-sizing: border-box;
   overflow: hidden;
-  margin-top: calc(-1 * var(--nav-bar-height, 88px));
+  margin-top: calc(-1 * var(--nav-bar-height, 0px));
 }
 
 /* 背景图 */
@@ -46,8 +46,8 @@
   position: absolute;
   top: 0;
   left: 0;
-  width: 750rpx;
-  height: 654rpx;
+  width: 100%;
+  height: 100%;
   z-index: 0;
 }
 
@@ -59,8 +59,8 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 16rpx;
-  padding: 60rpx 40rpx 0;
+  gap: 24rpx;
+  padding: 80rpx 40rpx 0;
 }
 
 /* 头像选择按钮（重置button样式） */
@@ -172,9 +172,9 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background: #fff;
+  /* background: #fff; */
   border-radius: 24rpx;
-  height: 148rpx;
+  height: 92rpx;
   width: 100%;
   margin-bottom: 24rpx;
   padding: 0 20rpx;
