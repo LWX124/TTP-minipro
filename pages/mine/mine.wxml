@@ -39,12 +39,8 @@
         <view class="copy-tag" bindtap="copyId">复制</view>
       </view>
     </view>
-  </view>
 
-  <!-- 内容区域（无白色卡片包裹） -->
-  <view class="content-area">
-
-    <!-- 奖励统计（仅登录后） -->
+    <!-- 奖励统计（仅登录后） - 移到top-section内部 -->
     <view wx:if="{{isLogin}}" class="stats-card">
       <view class="stat-item">
         <text class="stat-num">{{statistics.totalReward}}</text>
@@ -59,6 +55,10 @@
         <text class="stat-label">任务奖励</text>
       </view>
     </view>
+  </view>
+
+  <!-- 内容区域（无白色卡片包裹） -->
+  <view class="content-area">
 
     <!-- 跑车必备神器 Banner -->
     <view class="ad-banner-card">
