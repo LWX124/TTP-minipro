@@ -103,7 +103,7 @@
       </button>
       <view class="bottom-btn welfare-btn" bindtap="onWelfare">
         <image class="bottom-btn-img" src="/images/mine/rect_welfare.png" mode="aspectFit" />
-        <text class="bottom-btn-text">加福利关</text>
+        <text class="bottom-btn-text">加福利官</text>
       </view>
     </view>
 

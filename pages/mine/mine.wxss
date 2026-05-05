@@ -60,7 +60,7 @@
   flex-direction: column;
   align-items: center;
   gap: 24rpx;
-  padding: 66rpx 0rpx 0;
+  padding: 42rpx 0rpx 0;
 }
 
 /* 头像选择按钮（重置button样式） */
@@ -297,6 +297,10 @@
   line-height: 1;
   box-sizing: border-box;
   height: 128rpx;
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .bottom-btn::after {
@@ -304,18 +308,16 @@
 }
 
 .share-btn {
-  background: #e8f4fd;
+  background-image: url('/images/mine/rect_share.png');
 }
 
 .welfare-btn {
-  background: #fdf0e0;
+  background-image: url('/images/mine/rect_welfare.png');
 }
 
-/* box_6/box_7: width 88rpx, height 88rpx */
+/* 隐藏按钮内的图片元素 */
 .bottom-btn-img {
-  width: 64rpx;
-  height: 64rpx;
-  flex-shrink: 0;
+  display: none;
 }
 
 /* text-group_2: font-size 32rpx, color #010005 */
@@ -323,6 +325,8 @@
   font-size: 28rpx;
   font-weight: normal;
   color: #010005;
+  position: relative;
+  z-index: 1;
 }
 
 /* 退出登录 */
