@@ -60,7 +60,7 @@
   flex-direction: column;
   align-items: center;
   gap: 16rpx;
-  padding: 0 40rpx;
+  padding: 60rpx 40rpx 0;
 }
 
 /* 头像选择按钮（重置button样式） */
