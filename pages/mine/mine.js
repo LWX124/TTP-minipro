@@ -12,7 +12,16 @@ Page({
     showWelfareModal: false,
     showProfileSheet: false,
     wxAvatarUrl: '',
-    wxNickname: ''
+    wxNickname: '',
+    statusBarHeight: 0,
+    navBarHeight: 0
+  },
+
+  onLoad() {
+    const systemInfo = wx.getSystemInfoSync()
+    const statusBarHeight = systemInfo.statusBarHeight || 0
+    const navBarHeight = statusBarHeight + 44
+    this.setData({ statusBarHeight, navBarHeight })
   },
 
   onShow() {

@@ -1,22 +1,27 @@
 <view class="page">
   <loading-overlay visible="{{showLoginLoading}}" text="{{loginLoadingText}}" />
 
-  <!-- 顶部黄色区域（含用户信息） -->
-  <view class="top-section">
+  <!-- 顶部区域（含背景图和用户信息） -->
+  <view class="top-section" style="padding-top: {{navBarHeight}}px;">
     <!-- 背景图 -->
     <image class="bg-profile" src="/images/mine/bg_profile.png" mode="aspectFill" />
+
+    <!-- 自定义导航栏 -->
+    <view class="custom-nav" style="padding-top: {{statusBarHeight}}px;">
+      <view class="custom-nav-content">
+        <text class="custom-nav-title">我的</text>
+      </view>
+    </view>
 
     <!-- 游客 -->
     <view wx:if="{{!isLogin}}" class="user-section">
       <view class="avatar avatar-circle avatar-placeholder">
         <text class="avatar-text">👤</text>
       </view>
-      <view class="user-detail">
-        <text class="nickname">游客</text>
-        <text class="guest-hint">登录后查看更多功能</text>
-      </view>
+      <text class="nickname">游客</text>
+      <text class="guest-hint">登录后查看更多功能</text>
+      <button class="login-btn" bindtap="handleLogin">立即登录</button>
     </view>
-    <button wx:if="{{!isLogin}}" class="login-btn" bindtap="handleLogin">立即登录</button>
 
     <!-- 已登录 -->
     <view wx:if="{{isLogin}}" class="user-section">
@@ -28,21 +33,19 @@
       <button wx:else class="avatar-choose-btn" open-type="chooseAvatar" bindchooseavatar="onChooseAvatar">
         <image class="avatar avatar-circle" src="{{userInfo.headImg}}" mode="aspectFill" />
       </button>
-      <view class="user-detail">
-        <text class="nickname">{{userInfo.name || '微信用户'}}</text>
-        <view class="user-id-row">
-          <text class="user-id-text">ID：{{userInfo.userId || ''}}</text>
-          <view class="copy-tag" bindtap="copyId">复制</view>
-        </view>
+      <text class="nickname">{{userInfo.name || '微信用户'}}</text>
+      <view class="user-id-row">
+        <text class="user-id-text">ID：{{userInfo.userId || ''}}</text>
+        <view class="copy-tag" bindtap="copyId">复制</view>
       </view>
     </view>
   </view>
 
-  <!-- 白色内容卡片 -->
-  <view class="content-card">
+  <!-- 内容区域（无白色卡片包裹） -->
+  <view class="content-area">
 
-    <!-- 奖励统计（仅登录后） - 移到顶部区域外 -->
-    <view wx:if="{{isLogin}}" class="stats-row">
+    <!-- 奖励统计（仅登录后） -->
+    <view wx:if="{{isLogin}}" class="stats-card">
       <view class="stat-item">
         <text class="stat-num">{{statistics.totalReward}}</text>
         <text class="stat-label">合计奖励</text>
@@ -58,12 +61,12 @@
     </view>
 
     <!-- 跑车必备神器 Banner -->
-    <view class="ad-banner-wrap">
+    <view class="ad-banner-card">
       <image class="ad-banner-img" src="/images/mine/banner_ad.png" mode="aspectFill" />
     </view>
 
-    <!-- 功能网格 - 改为白色卡片样式 -->
-    <view class="func-grid">
+    <!-- 功能网格 -->
+    <view class="func-card">
       <view class="func-item" bindtap="goUploadHistory">
         <image class="func-icon-img" src="/images/mine/icon_upload_record.png" mode="aspectFit" />
         <text class="func-name">上传记录</text>
@@ -93,14 +96,14 @@
     </view>
 
     <!-- 底部按钮 -->
-    <view class="bottom-btns">
+    <view class="bottom-btns-card">
       <button class="bottom-btn share-btn" open-type="share">
         <image class="bottom-btn-img" src="/images/mine/rect_share.png" mode="aspectFit" />
         <text class="bottom-btn-text">分享好友</text>
       </button>
       <view class="bottom-btn welfare-btn" bindtap="onWelfare">
         <image class="bottom-btn-img" src="/images/mine/rect_welfare.png" mode="aspectFit" />
-        <text class="bottom-btn-text">加福利官</text>
+        <text class="bottom-btn-text">加福利关</text>
       </view>
     </view>
 
