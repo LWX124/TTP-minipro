@@ -298,26 +298,21 @@
   box-sizing: border-box;
   height: 128rpx;
   position: relative;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+  overflow: hidden;
 }
 
 .bottom-btn::after {
   border: none;
 }
 
-.share-btn {
-  background-image: url('/images/mine/rect_share.png');
-}
-
-.welfare-btn {
-  background-image: url('/images/mine/rect_welfare.png');
-}
-
-/* 隐藏按钮内的图片元素 */
+/* 按钮背景图片 */
 .bottom-btn-img {
-  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
 }
 
 /* text-group_2: font-size 32rpx, color #010005 */

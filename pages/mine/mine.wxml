@@ -98,11 +98,11 @@
     <!-- 底部按钮 -->
     <view class="bottom-btns-card">
       <button class="bottom-btn share-btn" open-type="share">
-        <image class="bottom-btn-img" src="/images/mine/rect_share.png" mode="aspectFit" />
+        <image class="bottom-btn-img" src="/images/mine/rect_share.png" mode="aspectFill" />
         <text class="bottom-btn-text">分享好友</text>
       </button>
       <view class="bottom-btn welfare-btn" bindtap="onWelfare">
-        <image class="bottom-btn-img" src="/images/mine/rect_welfare.png" mode="aspectFit" />
+        <image class="bottom-btn-img" src="/images/mine/rect_welfare.png" mode="aspectFill" />
         <text class="bottom-btn-text">加福利官</text>
       </view>
     </view>
